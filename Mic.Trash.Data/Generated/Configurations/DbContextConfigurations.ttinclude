@@ -22,7 +22,8 @@ public static partial class Configurations
 		{ 
 			Func<Type, bool> func = 
 				(t) => 
-					!t.IsAbstract && !t.IsSealed; // <--- change this line to specify your own custom Domain Class filters, i.e. you may want to exclude all classes that start with "ABC"
+					!t.IsAbstract && !t.IsSealed
+					&& !t.FullName.Contains("ApplicationUser"); // <--- change this line to specify your own custom Domain Class filters, i.e. you may want to exclude all classes that start with "ABC"
 			return func;
 		} 
 	}
