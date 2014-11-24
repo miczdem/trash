@@ -39,8 +39,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mic.Trash.BusinessInterfaces\Mic.Trash.BusinessInterfaces.csproj">
+      <Project>{f9a45a55-5f65-4f9c-90ab-168057025e51}</Project>
+      <Name>Mic.Trash.BusinessInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mic.Trash.Business\Mic.Trash.Business.csproj">
+      <Project>{cc288697-dfcf-4c6a-a3d3-398022595bcc}</Project>
+      <Name>Mic.Trash.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mic.Trash.Data\Mic.Trash.Data.csproj">
+      <Project>{3c83a6a2-1caf-42c4-8acf-fa1e875f39e6}</Project>
+      <Name>Mic.Trash.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mic.Trash.Domain\Mic.Trash.Domain.csproj">
+      <Project>{0f9fd884-6fa9-4dc5-8771-78d6b57a35a8}</Project>
+      <Name>Mic.Trash.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mic.Trash.RepositoryInterfaces\Mic.Trash.RepositoryInterfaces.csproj">
+      <Project>{7f5a72aa-6a43-49da-8e5c-292b76ead3c7}</Project>
+      <Name>Mic.Trash.RepositoryInterfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
