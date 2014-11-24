@@ -15,5 +15,13 @@ namespace Mic.Trash.Data
 		{
 		}
 	}
+    public partial class ApplicationUserRepository : SSW.Data.EF.BaseRepository<ApplicationUser>, IApplicationUserRepository
+    {
+        public ApplicationUserRepository(IDbContextManager contextmanager)
+            : base(contextmanager)
+        {
+        }
+    }
+
 }
 

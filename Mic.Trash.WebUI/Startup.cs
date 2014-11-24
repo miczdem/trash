@@ -8,6 +8,7 @@ namespace Mic.Trash.WebUI
     {
         public void Configuration(IAppBuilder app)
         {
+            IoC.RegisterContainer(app);
             ConfigureAuth(app);
         }
     }

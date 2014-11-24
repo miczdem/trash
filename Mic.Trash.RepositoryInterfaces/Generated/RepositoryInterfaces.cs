@@ -8,5 +8,8 @@ namespace Mic.Trash.RepositoryInterfaces
 	public partial interface IArticleRepository : IRepository<Article>
 	{
 	}
+    public partial interface IApplicationUserRepository : IRepository<ApplicationUser>
+    {
+    }
 }
 
