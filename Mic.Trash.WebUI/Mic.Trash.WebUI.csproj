@@ -310,10 +310,6 @@
       <Project>{f9a45a55-5f65-4f9c-90ab-168057025e51}</Project>
       <Name>Mic.Trash.BusinessInterfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Mic.Trash.Data\Mic.Trash.Data.csproj">
-      <Project>{3c83a6a2-1caf-42c4-8acf-fa1e875f39e6}</Project>
-      <Name>Mic.Trash.Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Mic.Trash.DependencyResolution\Mic.Trash.DependencyResolution.csproj">
       <Project>{437ab375-0e91-4fc9-ac1f-11947a70cae8}</Project>
       <Name>Mic.Trash.DependencyResolution</Name>
