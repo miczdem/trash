@@ -80,7 +80,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RepositoryInterfaces.tt</DependentUpon>
     </Compile>
-    <Compile Include="ITrashDataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using Mic.Trash.Domain;
 using Mic.Trash.RepositoryInterfaces;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -7,22 +8,29 @@ namespace Mic.Trash.Data
 {
   
 
-    public partial class TrashDataContext : IdentityDbContext<ApplicationUser>, ITrashDataContext
+    public partial class TrashDataContext : IdentityDbContext<ApplicationUser>
     {
-        public TrashDataContext()
+
+        public TrashDataContext() 
             : base("DefaultConnection", false)
         {
             Configuration.LazyLoadingEnabled = false;
         }
 
-        public static TrashDataContext Create()
+
+        public TrashDataContext(string connectionString)
+            : base(connectionString, throwIfV1Schema: false)
         {
-            return new TrashDataContext();
+            Configuration.LazyLoadingEnabled = false;
         }
 
-        public IdentityDbContext<ApplicationUser> IdentityContext { get { return this; } }
-        public DbContext Context { get { return this; }  }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            
+        }
 
     }
 }

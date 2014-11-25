@@ -92,6 +92,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Mic.Trash.Data\Mic.Trash.Data.csproj">
+      <Project>{3C83A6A2-1CAF-42C4-8ACF-FA1E875F39E6}</Project>
+      <Name>Mic.Trash.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Mic.Trash.WebUI\Mic.Trash.WebUI.csproj">
       <Project>{84212325-36A6-451E-9AAC-3FFAB4D87293}</Project>
       <Name>Mic.Trash.WebUI</Name>

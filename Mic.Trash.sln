@@ -50,6 +50,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mic.Trash.DependencyResolut
 		{7F5A72AA-6A43-49DA-8E5C-292B76EAD3C7} = {7F5A72AA-6A43-49DA-8E5C-292B76EAD3C7}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. UI", "1. UI", "{CEFD0864-DD73-4809-B49A-96D98216BE59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,5 +97,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{84212325-36A6-451E-9AAC-3FFAB4D87293} = {CEFD0864-DD73-4809-B49A-96D98216BE59}
+		{DD2B874B-DB94-4418-A049-8B1B6894AE2E} = {CEFD0864-DD73-4809-B49A-96D98216BE59}
 	EndGlobalSection
 EndGlobal

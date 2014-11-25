@@ -155,7 +155,7 @@ namespace Mic.Trash.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email , FirstName = "", LastName = "", CreatedDateTime = DateTime.UtcNow};
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email , FirstName = "    ", LastName = "", CreatedDateTime = DateTime.UtcNow};
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

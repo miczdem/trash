@@ -14,6 +14,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Mic.Trash.WebUI.Models;
+using SSW.Data.EF;
 
 namespace Mic.Trash.WebUI
 {
@@ -45,7 +46,7 @@ namespace Mic.Trash.WebUI
 
         public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUserManager> options, IOwinContext context) 
         {
-            var dbContext = DependencyResolver.Current.GetService<ITrashDataContext>().Context;
+            var dbContext = DependencyResolver.Current.GetService<IDbContextManager>().Context;
 
             var manager = new ApplicationUserManager(new UserStore<ApplicationUser>(dbContext));
             // Configure validation logic for usernames

@@ -20,22 +20,23 @@ namespace Mic.Trash.WebUI
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
 
             //// OPTIONAL: Register model binders that require DI.
-            //builder.RegisterModelBinders(Assembly.GetExecutingAssembly());
-            //builder.RegisterModelBinderProvider();
+            builder.RegisterModelBinders(Assembly.GetExecutingAssembly());
+            builder.RegisterModelBinderProvider();
 
             //// OPTIONAL: Register web abstractions like HttpContextBase.
-            //builder.RegisterModule<AutofacWebTypesModule>();
+            builder.RegisterModule<AutofacWebTypesModule>();
 
             //// OPTIONAL: Enable property injection in view pages.
-            //builder.RegisterSource(new ViewRegistrationSource());
+            builder.RegisterSource(new ViewRegistrationSource());
 
             //// OPTIONAL: Enable property injection into action filters.
-            //builder.RegisterFilterProvider();
+            builder.RegisterFilterProvider();
 
             // Set the dependency resolver to be Autofac.
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
             app.UseAutofacMiddleware(container);
+            app.UseAutofacMvc();
         }
 
     }
